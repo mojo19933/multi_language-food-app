@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.MultiLanguageFoodOrderingApp" parent="Base.Theme.MultiLanguageFoodOrderingApp" />
+
+        <!-- Splash Theme. -->
+        <style name="Theme.MultiLanguageFoodOrderingApp.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+            <item name="android:windowBackground">
+                @drawable/splash_background
+            </item>
+        </style>
+
 </resources>
