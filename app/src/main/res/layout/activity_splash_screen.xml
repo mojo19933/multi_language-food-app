@@ -26,13 +26,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/splash_button"
         android:layout_marginTop="15dp"
-        android:background="@drawable/orange_button"
+        app:backgroundTint="@null"
+        android:background="@drawable/button_selector"
         app:layout_constraintTop_toBottomOf="@+id/tvAppName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
