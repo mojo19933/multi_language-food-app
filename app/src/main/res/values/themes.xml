@@ -1,17 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-        <style name="Base.Theme.MultiLanguageFoodOrderingApp" parent="Theme.Material3.DayNight.NoActionBar">
-            <!-- Customize your light theme here. -->
-            <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        </style>
+    <style name="Base.Theme.MultiLanguageFoodOrderingApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/light_green</item>
+        <item name="colorBg">@color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
 
     <style name="Theme.MultiLanguageFoodOrderingApp" parent="Base.Theme.MultiLanguageFoodOrderingApp" />
 
-        <!-- Splash Theme. -->
-        <style name="Theme.MultiLanguageFoodOrderingApp.Splash" parent="Theme.Material3.DayNight.NoActionBar">
-            <item name="android:windowBackground">
-                @drawable/splash_background
-            </item>
-        </style>
+    <!-- Splash Theme. -->
+    <style name="Theme.MultiLanguageFoodOrderingApp.Splash" parent="Base.Theme.MultiLanguageFoodOrderingApp">
+        <item name="android:windowBackground">
+            @drawable/splash_background
+        </item>
+    </style>
 
 </resources>
