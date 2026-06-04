@@ -2,7 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MultiLanguageFoodOrderingApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/light_green</item>
+        <item name="colorPrimary">@color/dark_orange</item>
+        <item name="colorTextPrimary">@color/orange</item>
         <item name="colorBg">@color/white</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>

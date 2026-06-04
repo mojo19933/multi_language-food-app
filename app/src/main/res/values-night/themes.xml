@@ -2,7 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MultiLanguageFoodOrderingApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <item name="colorPrimary">@color/dark_green</item>
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorTextPrimary">@color/orange</item>
         <item name="colorBg">@color/grey</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
