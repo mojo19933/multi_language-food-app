@@ -2,4 +2,6 @@
 <resources>
     <attr name="colorBg" format="color"/>
     <attr name="colorTextPrimary" format="color"/>
+    <attr name="colorChipBackgroundUnselected" format="color"/>
+    <attr name="colorTextChip" format="color"/>
 </resources>

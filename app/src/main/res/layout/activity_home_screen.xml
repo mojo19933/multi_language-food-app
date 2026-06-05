@@ -24,13 +24,13 @@
         android:id="@+id/tiSearch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/search_food"
-        android:layout_marginTop="@dimen/small_margin"
         android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
+        android:hint="@string/search_food"
         app:boxBackgroundMode="outline"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvFoodOrderingApp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -39,8 +39,7 @@
             android:drawableStart="@drawable/ic_search"
             android:drawablePadding="8dp"
             android:inputType="text"
-            android:maxLines="1"
-            />
+            android:maxLines="1" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -49,12 +48,45 @@
         android:id="@+id/tvCategories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/categories"
-        android:textStyle="bold"
-        android:textColor="?attr/colorTextPrimary"
         android:layout_marginTop="@dimen/small_margin"
-        app:layout_constraintTop_toBottomOf="@id/tiSearch"
+        android:text="@string/categories"
+        android:textColor="?attr/colorTextPrimary"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/tiSearch"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tiSearch" />
+
+    <TextView
+        android:id="@+id/chipPizzaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:text="@string/pizza"
+        style="@style/ChipStyleText"
+        app:layout_constraintEnd_toStartOf="@id/chipBurgerText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCategories" />
+
+    <TextView
+        android:id="@+id/chipBurgerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/burger"
+        style="@style/ChipStyleText"
+        app:layout_constraintEnd_toStartOf="@id/chipDrinksText"
+        app:layout_constraintStart_toEndOf="@id/chipPizzaText"
+        app:layout_constraintTop_toBottomOf="@id/tvCategories" />
+
+    <TextView
+        android:id="@+id/chipDrinksText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/drinks"
+        style="@style/ChipStyleText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/chipBurgerText"
+        app:layout_constraintTop_toBottomOf="@id/tvCategories" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,5 +5,8 @@
     <string name="splash_button">Splash Button</string>
     <string name="food_ordering">Food Ordering App</string>
     <string name="search_food">Search Food</string>
-    <string name="categories">Categories</string>
+    <string name="categories">Categories:</string>
+    <string name="pizza">Pizza</string>
+    <string name="burger">Burger</string>
+    <string name="drinks">Drinks</string>
 </resources>

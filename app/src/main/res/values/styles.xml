@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Chip Text Style !-->
+    <style name="ChipStyleText">
+
+        <item name="android:background">@drawable/chip_category_ripple</item>
+
+        <item name="android:paddingHorizontal">@dimen/margin_large</item>
+        <item name="android:paddingVertical">@dimen/small_margin</item>
+
+        <item name="android:textColor">?attr/colorTextChip</item>
+        <item name="android:textStyle">bold</item>
+
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+
+    </style>
+</resources>

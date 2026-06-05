@@ -5,6 +5,10 @@
         <item name="colorPrimary">@color/dark_orange</item>
         <item name="colorTextPrimary">@color/orange</item>
         <item name="colorBg">@color/white</item>
+        <item name="chipStrokeColor">@color/red</item>
+        <item name="colorChipBackgroundUnselected">@color/grey</item>
+        <item name="rippleColor">@color/silver</item>
+        <item name="colorTextChip">@color/white</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
