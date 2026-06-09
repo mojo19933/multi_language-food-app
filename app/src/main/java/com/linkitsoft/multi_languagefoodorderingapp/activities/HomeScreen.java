@@ -12,12 +12,14 @@ import androidx.core.view.WindowInsetsCompat;
 import com.linkitsoft.multi_languagefoodorderingapp.R;
 import com.linkitsoft.multi_languagefoodorderingapp.databinding.ActivityHomeScreenBinding;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class HomeScreen extends AppCompatActivity {
 
     ActivityHomeScreenBinding binding;
+    List<TextView> chipsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,38 +34,40 @@ public class HomeScreen extends AppCompatActivity {
         });*/
         initViews();
         clickListener();
+        selectedChipListener();
     }
 
     private void initViews() {
-        binding.chipPizzaText.setSelected(true);
-        binding.chipBurgerText.setSelected(false);
-        binding.chipDrinksText.setSelected(false);
+        chipsList = new ArrayList<>();
+        chipsList.add(binding.chipPizzaText);
+        chipsList.add(binding.chipBurgerText);
+        chipsList.add(binding.chipDrinksText);
+        selectChip(binding.chipPizzaText);
     }
 
-    private void clickListener() {
-        binding.chipPizzaText.setOnClickListener(view -> {
-            selectChip(binding.chipPizzaText);
-        });
-        binding.chipBurgerText.setOnClickListener(view -> {
-            selectChip(binding.chipBurgerText);
-        });
-        binding.chipDrinksText.setOnClickListener(view -> {
-            selectChip(binding.chipDrinksText);
-        });
+    private void selectedChipListener() {
+        for (TextView chip : chipsList) {
+            chip.setOnClickListener(view -> selectChip(chip));
+        }
     }
-
-
-    List<TextView> chips = Arrays.asList(
-            binding.chipPizzaText,
-            binding.chipBurgerText,
-            binding.chipDrinksText
-    );
 
     private void selectChip(TextView selectedChip) {
-        for (TextView chip : chips) {
+        for (TextView chip : chipsList) {
             chip.setSelected(false);
         }
         selectedChip.setSelected(true);
+    }
+
+    private void clickListener(){
+        binding.ivHeart.setOnClickListener(view -> {
+            /*if(binding.ivHeart.isSelected()){
+                binding.ivHeart.setSelected(false);
+            }
+            else{
+                binding.ivHeart.setSelected(true);
+            }*/
+            binding.ivHeart.setSelected(!binding.ivHeart.isSelected());
+        });
     }
 
 }

@@ -10,5 +10,8 @@
         <item name="colorChipBackgroundUnselected">@color/grey</item>
         <item name="rippleColor">@color/silver</item>
         <item name="colorTextChip">@color/white</item>
+        <item name="colorFoodName">@color/mint_green</item>
+        <item name="colorFoodPrice">@color/white</item>
+        <item name="colorCardStroke">@color/grey</item>
     </style>
 </resources>

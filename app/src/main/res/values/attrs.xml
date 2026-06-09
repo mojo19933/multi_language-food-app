@@ -4,4 +4,7 @@
     <attr name="colorTextPrimary" format="color"/>
     <attr name="colorChipBackgroundUnselected" format="color"/>
     <attr name="colorTextChip" format="color"/>
+    <attr name="colorFoodName" format="color"/>
+    <attr name="colorFoodPrice" format="color"/>
+    <attr name="colorCardStroke" format="color"/>
 </resources>

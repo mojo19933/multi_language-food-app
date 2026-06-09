@@ -9,4 +9,7 @@
     <string name="pizza">Pizza</string>
     <string name="burger">Burger</string>
     <string name="drinks">Drinks</string>
+    <string name="popular_foods">Popular Foods</string>
+    <string name="food_name">Food name</string>
+    <string name="food_price">Price: $10</string>
 </resources>

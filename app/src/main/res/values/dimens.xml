@@ -16,4 +16,8 @@
     <!-- Radius -->
     <dimen name="chip_radius">32dp</dimen>
 
+    <!-- Card -->
+    <dimen name="card_radius">12dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+
 </resources>
