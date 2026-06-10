@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".activities.HomeScreen">
 
     <TextView
@@ -103,59 +103,15 @@
         app:layout_constraintStart_toStartOf="@id/tiSearch"
         app:layout_constraintTop_toBottomOf="@id/chipPizzaText" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/foodMaterialCv"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFoods"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="@dimen/small_margin"
-
-        app:cardCornerRadius="@dimen/card_radius"
-        app:layout_constraintEnd_toEndOf="@id/tiSearch"
+        app:layout_constraintTop_toBottomOf="@id/tvPopularFoods"
         app:layout_constraintStart_toStartOf="@id/tiSearch"
-        app:layout_constraintTop_toBottomOf="@id/tvPopularFoods">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/small_margin"
-            >
-
-            <TextView
-                android:id="@+id/tvFoodName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/food_name"
-                android:textColor="?attr/colorFoodName"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@id/ivHeart"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/ivHeart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/heart_selector"
-                android:clickable="true"
-                android:focusable="true"
-                app:layout_constraintBottom_toBottomOf="@id/tvFoodName"
-                app:layout_constraintTop_toTopOf="@id/tvFoodName"
-                app:layout_constraintEnd_toEndOf="parent"
-                />
-
-            <TextView
-                android:id="@+id/tvFoodPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/food_price"
-                android:textColor="?attr/colorFoodPrice"
-                app:layout_constraintStart_toStartOf="@id/tvFoodName"
-                app:layout_constraintTop_toBottomOf="@id/tvFoodName" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </com.google.android.material.card.MaterialCardView>
+        app:layout_constraintEnd_toEndOf="@id/tiSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

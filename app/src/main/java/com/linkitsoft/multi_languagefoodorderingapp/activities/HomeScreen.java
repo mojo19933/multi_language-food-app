@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.linkitsoft.multi_languagefoodorderingapp.R;
 import com.linkitsoft.multi_languagefoodorderingapp.databinding.ActivityHomeScreenBinding;
+import com.linkitsoft.multi_languagefoodorderingapp.model.FoodItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +21,7 @@ public class HomeScreen extends AppCompatActivity {
 
     ActivityHomeScreenBinding binding;
     List<TextView> chipsList;
+    List<FoodItem> foodItemList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +41,9 @@ public class HomeScreen extends AppCompatActivity {
 
     private void initViews() {
         chipsList = new ArrayList<>();
-        chipsList.add(binding.chipPizzaText);
-        chipsList.add(binding.chipBurgerText);
-        chipsList.add(binding.chipDrinksText);
+        foodItemList = new ArrayList<>();
         selectChip(binding.chipPizzaText);
+        loadDummyData();
     }
 
     private void selectedChipListener() {
@@ -58,16 +59,31 @@ public class HomeScreen extends AppCompatActivity {
         selectedChip.setSelected(true);
     }
 
-    private void clickListener(){
-        binding.ivHeart.setOnClickListener(view -> {
-            /*if(binding.ivHeart.isSelected()){
+    private void clickListener() {
+        /*binding.ivHeart.setOnClickListener(view -> {
+            *//*if(binding.ivHeart.isSelected()){
                 binding.ivHeart.setSelected(false);
             }
             else{
                 binding.ivHeart.setSelected(true);
-            }*/
+            }*//*
             binding.ivHeart.setSelected(!binding.ivHeart.isSelected());
-        });
+        });*/
+    }
+
+    private void loadDummyData() {
+
+        // For Chip
+        chipsList.add(binding.chipPizzaText);
+        chipsList.add(binding.chipBurgerText);
+        chipsList.add(binding.chipDrinksText);
+
+        // For Food
+        foodItemList.add(new FoodItem("Burger", 10.5, true));
+        foodItemList.add(new FoodItem("Pizza", 15, false));
+        foodItemList.add(new FoodItem("Drinks", 5.2, false));
+
+        foodItemList.get(1).setFavourite(true);
     }
 
 }
